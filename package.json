@@ -1,0 +1,24 @@
+{
+  "name": "3d",
+  "version": "1.0.0",
+  "description": "### this is just here because I can't embed github skyline in an iframe on my website",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/its-jefe/My-2020-Skyline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/its-jefe/My-2020-Skyline/issues"
+  },
+  "homepage": "https://github.com/its-jefe/My-2020-Skyline#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "three": "^0.140.2"
+  }
+}
