@@ -19,6 +19,7 @@
   "homepage": "https://github.com/its-jefe/My-2020-Skyline#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "firebase": "^9.8.1",
     "three": "^0.140.2"
   }
 }
