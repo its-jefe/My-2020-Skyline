@@ -46,7 +46,7 @@ function animate() {
   requestAnimationFrame( animate );
 
   // scene.rotation.x += 0.01;
-  scene.rotation.y += 0.01;
+  scene.rotation.y += 0.0035;
 
   renderer.render( scene, camera );
 };
