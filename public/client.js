@@ -1,7 +1,5 @@
-import * as THREE from 'three'
+import * as THREE from './three'
 import { OrbitControls } from './jsm/controls/OrbitControls.js'
-import Stats from './jsm/libs/stats.module.js'
-import { GUI } from './jsm/libs/lil-gui.module.min.js'
 
 THREE.Cache.enabled = true;
 
@@ -11,7 +9,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 2
 
 const renderer = new THREE.WebGLRenderer({ alpha: true })
-renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setSize(window.innerWidth, window.innerWidth * 1.618)
 document.body.appendChild(renderer.domElement)
 
 // this is new 
@@ -27,8 +25,7 @@ const material = new THREE.MeshBasicMaterial({
 const loader = new THREE.ObjectLoader();
 
 loader.load("./model.json",
-	
-	// onLoad callback
+
 	// Here the loaded data is assumed to be an object
 	function ( object ) {
 		// Add the loaded object to the scene
@@ -59,12 +56,17 @@ window.addEventListener(
     false
 )
 
+camera.aspect = window.innerWidth / window.innerHeight
+camera.updateProjectionMatrix()
+renderer.setSize(window.innerWidth, window.innerHeight)
 camera.position.z = 80;
+camera.lookAt(0,0,0)
+render()
 
 function animate() {
     requestAnimationFrame(animate)
     // cube.rotation.x += 0.01
-    // cube.rotation.y += 0.01
+    // cube.rotation.y += 0.01çç
     controls.update()
     render()
 }

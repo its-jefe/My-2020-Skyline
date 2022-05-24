@@ -1,10 +1,13 @@
-// Simple express server
+const functions = require("firebase-functions");
 const express = require('express')
 const app = express()
+
 const path = require('path')
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public/'))
 app.use('/build/', express.static(path.join(__dirname, 'node_modules/three/build')))
 app.use('/jsm/', express.static(path.join(__dirname, 'node_modules/three/examples/jsm')))
 
 app.listen(3000, () => console.log("Running on PORT 3000"))
+
+exports.app = functions.https.onRequest(app)
