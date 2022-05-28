@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to Firebase Hosting</title>
+  <title>Jeffs 2021 Skyline</title>
 
   <!-- update the version number as needed -->
   <!-- <script defer src="/__/firebase/9.8.1/firebase-app-compat.js"></script> -->
@@ -24,37 +24,59 @@
     -->
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-  <style media="screen">
-    body {
-      margin: 0;
-      overflow: hidden
-    }
-  </style>
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
-<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
-<script type="importmap">
+  <script defer type="importmap">
   {
-    "imports": {
-      "three": "https://unpkg.com/three@<version>/build/three.module.js"
-    }
+      "imports": {
+          "three": "./build/three.module.js"
+      }
   }
 </script>
 
-<script type="module">
+  <style media="screen">
+    /* @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap'); */
+    @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
 
-  import * as THREE from 'three';
-
-  const scene = new THREE.Scene();
-
-</script>
-
+    h1 {
+      /* font-family: 'Londrina Outline', cursive; */
+      font-family: 'Goldman', cursive;  
+      position: absolute;
+      text-align: center;
+      top: 10%;
+      color: black;
+      filter: 
+      drop-shadow(0 0 1px hsl(30, 100%, 50%))
+      drop-shadow(0 0 2px hsl(30, 100%, 50%))
+      drop-shadow(0 0 3px hsl(30, 100%, 75%))
+      drop-shadow(0 0 3px hsl(50, 100%, 50%))
+      drop-shadow(0 0 5px hsl(75, 100%, 50%));
+      font-size: 150%;
+      font-weight: bold;
+      z-index: -1;
+      user-select: none;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  </style>
 
 </head>
 
 <body>
 
-  <script type="module" src="./client.js"></script>
+  <h1>
+    2021 GitHub Skyline
+  </h1>
+  <script type="module" src="client.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {

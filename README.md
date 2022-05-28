@@ -1,12 +1,11 @@
 # My 2021 GitHub Skyline
 
-> ### This all began when I got denied by GitHub trying to get the cool 3D Skyline into an iFrame on my portfolio.
-> 
-> ### Naturally hosting my own 3D model was the only solution.
-
-Offloading this large 3D render to a server on firebase hopefully keeps me from needing to worry too heavily about performance, although I will be looking into it more.
+> ### Dipping my toes into hosting 3D models on the web. 
+> ### Had some fun messing with my 2021 GitHub Skyline.
+>> Want to look more into performance when using 3D models.
+>
+> Hosted [here!](https://my-skyline-2021.web.app)
 
 ## Implementing: 
-- `Three.js`
+- `Node` (`Express`, `Three.js`)
 - `Firebase` `Cloud Functions`
-- `Express`

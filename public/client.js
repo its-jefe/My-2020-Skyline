@@ -1,4 +1,4 @@
-import * as THREE from './three'
+import * as THREE from 'three'
 import { OrbitControls } from './jsm/controls/OrbitControls.js'
 
 THREE.Cache.enabled = true;
@@ -6,7 +6,7 @@ THREE.Cache.enabled = true;
 const scene = new THREE.Scene()
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, window.innerWidth)
-camera.position.z = 2
+// camera.position.z = 2
 
 const renderer = new THREE.WebGLRenderer({ alpha: true })
 renderer.setSize(window.innerWidth, window.innerWidth * 1.618)
@@ -59,7 +59,7 @@ window.addEventListener(
 camera.aspect = window.innerWidth / window.innerHeight
 camera.updateProjectionMatrix()
 renderer.setSize(window.innerWidth, window.innerHeight)
-camera.position.z = 80;
+camera.position.z = 50;
 camera.lookAt(0,0,0)
 render()
 
